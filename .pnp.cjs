@@ -37,6 +37,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.2.18"],\
           ["autoprefixer", "virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:10.4.17"],\
           ["axios", "npm:1.6.7"],\
+          ["cloudinary", "npm:2.0.1"],\
           ["eslint-config-react-app", "virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:7.0.1"],\
           ["flowbite", "npm:2.2.1"],\
           ["flowbite-react", "virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:0.7.2"],\
@@ -44,6 +45,8 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:18.2.0"],\
           ["react-dotenv", "npm:0.1.3"],\
+          ["react-dropzone", "virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:14.2.3"],\
+          ["react-hook-form", "virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:7.50.1"],\
           ["react-scripts", "virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:5.0.1"],\
           ["tailwindcss", "npm:3.4.1"],\
           ["typescript", "patch:typescript@npm%3A4.9.5#optional!builtin<compat/typescript>::version=4.9.5&hash=289587"],\
@@ -7664,6 +7667,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["attr-accept", [\
+      ["npm:2.2.2", {\
+        "packageLocation": "../../.yarn/berry/cache/attr-accept-npm-2.2.2-b9cd0d8eac-10c0.zip/node_modules/attr-accept/",\
+        "packageDependencies": [\
+          ["attr-accept", "npm:2.2.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["autolinker", [\
       ["npm:0.28.1", {\
         "packageLocation": "../../.yarn/berry/cache/autolinker-npm-0.28.1-dbe1de77b4-10c0.zip/node_modules/autolinker/",\
@@ -8664,6 +8676,17 @@ const RAW_RUNTIME_STATE =
           ["string-width", "npm:4.2.3"],\
           ["strip-ansi", "npm:6.0.1"],\
           ["wrap-ansi", "npm:7.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["cloudinary", [\
+      ["npm:2.0.1", {\
+        "packageLocation": "../../.yarn/berry/cache/cloudinary-npm-2.0.1-4716888797-10c0.zip/node_modules/cloudinary/",\
+        "packageDependencies": [\
+          ["cloudinary", "npm:2.0.1"],\
+          ["lodash", "npm:4.17.21"],\
+          ["q", "npm:1.5.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11644,6 +11667,16 @@ const RAW_RUNTIME_STATE =
         "packagePeers": [\
           "@types/webpack",\
           "webpack"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["file-selector", [\
+      ["npm:0.6.0", {\
+        "packageLocation": "../../.yarn/berry/cache/file-selector-npm-0.6.0-04259af1f7-10c0.zip/node_modules/file-selector/",\
+        "packageDependencies": [\
+          ["file-selector", "npm:0.6.0"],\
+          ["tslib", "npm:2.6.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -19532,11 +19565,58 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["react-dropzone", [\
+      ["npm:14.2.3", {\
+        "packageLocation": "../../.yarn/berry/cache/react-dropzone-npm-14.2.3-b5d5b11ea4-10c0.zip/node_modules/react-dropzone/",\
+        "packageDependencies": [\
+          ["react-dropzone", "npm:14.2.3"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:14.2.3", {\
+        "packageLocation": "./.yarn/__virtual__/react-dropzone-virtual-e5d8803208/3/.yarn/berry/cache/react-dropzone-npm-14.2.3-b5d5b11ea4-10c0.zip/node_modules/react-dropzone/",\
+        "packageDependencies": [\
+          ["react-dropzone", "virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:14.2.3"],\
+          ["@types/react", "npm:18.2.48"],\
+          ["attr-accept", "npm:2.2.2"],\
+          ["file-selector", "npm:0.6.0"],\
+          ["prop-types", "npm:15.8.1"],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["react-error-overlay", [\
       ["npm:6.0.11", {\
         "packageLocation": "../../.yarn/berry/cache/react-error-overlay-npm-6.0.11-021cdeaa92-10c0.zip/node_modules/react-error-overlay/",\
         "packageDependencies": [\
           ["react-error-overlay", "npm:6.0.11"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["react-hook-form", [\
+      ["npm:7.50.1", {\
+        "packageLocation": "../../.yarn/berry/cache/react-hook-form-npm-7.50.1-171fa49aee-10c0.zip/node_modules/react-hook-form/",\
+        "packageDependencies": [\
+          ["react-hook-form", "npm:7.50.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:7.50.1", {\
+        "packageLocation": "./.yarn/__virtual__/react-hook-form-virtual-de4d081bfb/3/.yarn/berry/cache/react-hook-form-npm-7.50.1-171fa49aee-10c0.zip/node_modules/react-hook-form/",\
+        "packageDependencies": [\
+          ["react-hook-form", "virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:7.50.1"],\
+          ["@types/react", "npm:18.2.48"],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -22876,6 +22956,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.2.18"],\
           ["autoprefixer", "virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:10.4.17"],\
           ["axios", "npm:1.6.7"],\
+          ["cloudinary", "npm:2.0.1"],\
           ["eslint-config-react-app", "virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:7.0.1"],\
           ["flowbite", "npm:2.2.1"],\
           ["flowbite-react", "virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:0.7.2"],\
@@ -22883,6 +22964,8 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:18.2.0"],\
           ["react-dotenv", "npm:0.1.3"],\
+          ["react-dropzone", "virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:14.2.3"],\
+          ["react-hook-form", "virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:7.50.1"],\
           ["react-scripts", "virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:5.0.1"],\
           ["tailwindcss", "npm:3.4.1"],\
           ["typescript", "patch:typescript@npm%3A4.9.5#optional!builtin<compat/typescript>::version=4.9.5&hash=289587"],\
