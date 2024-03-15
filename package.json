@@ -40,6 +40,7 @@
   },
   "main": "index.js",
   "repository": "git@github.com:dargenioa/wedding-album.git",
+  "homepage":"https://dargenioa.github.io/",
   "author": "Amanda D'Argenio <dargenioa14@gmail.com>",
   "license": "MIT",
   "type": "module",
