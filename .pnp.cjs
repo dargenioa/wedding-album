@@ -37,6 +37,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.2.64"],\
           ["@types/react-dom", "npm:18.2.21"],\
           ["autoprefixer", "virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:10.4.18"],\
+          ["cloudinary-react", "virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:1.8.1"],\
           ["flowbite", "npm:2.3.0"],\
           ["gh-pages", "npm:6.1.1"],\
           ["postcss", "npm:8.4.35"],\
@@ -4919,10 +4920,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/lodash", [\
-      ["npm:4.14.202", {\
-        "packageLocation": "../../.yarn/berry/cache/@types-lodash-npm-4.14.202-76de3e302b-10c0.zip/node_modules/@types/lodash/",\
+      ["npm:4.17.0", {\
+        "packageLocation": "../../.yarn/berry/cache/@types-lodash-npm-4.17.0-11e757616b-10c0.zip/node_modules/@types/lodash/",\
         "packageDependencies": [\
-          ["@types/lodash", "npm:4.14.202"]\
+          ["@types/lodash", "npm:4.17.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4932,7 +4933,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/@types-lodash.clonedeep-npm-4.5.9-3e0f9fe2fe-10c0.zip/node_modules/@types/lodash.clonedeep/",\
         "packageDependencies": [\
           ["@types/lodash.clonedeep", "npm:4.5.9"],\
-          ["@types/lodash", "npm:4.14.202"]\
+          ["@types/lodash", "npm:4.17.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4942,7 +4943,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/@types-lodash.debounce-npm-4.0.9-dcafdcd4bd-10c0.zip/node_modules/@types/lodash.debounce/",\
         "packageDependencies": [\
           ["@types/lodash.debounce", "npm:4.0.9"],\
-          ["@types/lodash", "npm:4.14.202"]\
+          ["@types/lodash", "npm:4.17.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7075,6 +7076,52 @@ const RAW_RUNTIME_STATE =
           ["string-width", "npm:4.2.3"],\
           ["strip-ansi", "npm:6.0.1"],\
           ["wrap-ansi", "npm:7.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["cloudinary-core", [\
+      ["npm:2.13.0", {\
+        "packageLocation": "../../.yarn/berry/cache/cloudinary-core-npm-2.13.0-af238250d5-10c0.zip/node_modules/cloudinary-core/",\
+        "packageDependencies": [\
+          ["cloudinary-core", "npm:2.13.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:e8214e3b513c853c9c3491e4a2e29abddf6c271efb203937ec05b9577e3eae70233dea76cf8090f87ee977a6cd476decce13892f686f1be011667bdd18d536bc#npm:2.13.0", {\
+        "packageLocation": "./.yarn/__virtual__/cloudinary-core-virtual-de7539e02e/3/.yarn/berry/cache/cloudinary-core-npm-2.13.0-af238250d5-10c0.zip/node_modules/cloudinary-core/",\
+        "packageDependencies": [\
+          ["cloudinary-core", "virtual:e8214e3b513c853c9c3491e4a2e29abddf6c271efb203937ec05b9577e3eae70233dea76cf8090f87ee977a6cd476decce13892f686f1be011667bdd18d536bc#npm:2.13.0"],\
+          ["@types/lodash", null],\
+          ["lodash", null]\
+        ],\
+        "packagePeers": [\
+          "@types/lodash",\
+          "lodash"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["cloudinary-react", [\
+      ["npm:1.8.1", {\
+        "packageLocation": "../../.yarn/berry/cache/cloudinary-react-npm-1.8.1-6c3ccae051-10c0.zip/node_modules/cloudinary-react/",\
+        "packageDependencies": [\
+          ["cloudinary-react", "npm:1.8.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:1.8.1", {\
+        "packageLocation": "./.yarn/__virtual__/cloudinary-react-virtual-e8214e3b51/3/.yarn/berry/cache/cloudinary-react-npm-1.8.1-6c3ccae051-10c0.zip/node_modules/cloudinary-react/",\
+        "packageDependencies": [\
+          ["cloudinary-react", "virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:1.8.1"],\
+          ["@types/react", "npm:18.2.64"],\
+          ["cloudinary-core", "virtual:e8214e3b513c853c9c3491e4a2e29abddf6c271efb203937ec05b9577e3eae70233dea76cf8090f87ee977a6cd476decce13892f686f1be011667bdd18d536bc#npm:2.13.0"],\
+          ["prop-types", "npm:15.8.1"],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -18157,6 +18204,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.2.64"],\
           ["@types/react-dom", "npm:18.2.21"],\
           ["autoprefixer", "virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:10.4.18"],\
+          ["cloudinary-react", "virtual:2fe6a05d9ee00119e5cec0b7d0613fdcb7541fa1e44feccad7d84ba5a0b89f69e7ef165efd4e097fa15d5aba553b972427e189e2b7ce0ca15f9434315d0cf870#npm:1.8.1"],\
           ["flowbite", "npm:2.3.0"],\
           ["gh-pages", "npm:6.1.1"],\
           ["postcss", "npm:8.4.35"],\

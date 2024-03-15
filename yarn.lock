@@ -3007,9 +3007,9 @@ __metadata:
   linkType: hard
 
 "@types/lodash@npm:*":
-  version: 4.14.202
-  resolution: "@types/lodash@npm:4.14.202"
-  checksum: 6064d43c8f454170841bd67c8266cc9069d9e570a72ca63f06bceb484cb4a3ee60c9c1f305c1b9e3a87826049fd41124b8ef265c4dd08b00f6766609c7fe9973
+  version: 4.17.0
+  resolution: "@types/lodash@npm:4.17.0"
+  checksum: 4c5b41c9a6c41e2c05d08499e96f7940bcf194dcfa84356235b630da920c2a5e05f193618cea76006719bec61c76617dff02defa9d29934f9f6a76a49291bd8f
   languageName: node
   linkType: hard
 
@@ -4680,6 +4680,27 @@ __metadata:
     strip-ansi: "npm:^6.0.0"
     wrap-ansi: "npm:^7.0.0"
   checksum: 6035f5daf7383470cef82b3d3db00bec70afb3423538c50394386ffbbab135e26c3689c41791f911fa71b62d13d3863c712fdd70f0fbdffd938a1e6fd09aac00
+  languageName: node
+  linkType: hard
+
+"cloudinary-core@npm:^2.13.0":
+  version: 2.13.0
+  resolution: "cloudinary-core@npm:2.13.0"
+  peerDependencies:
+    lodash: ">=4.0"
+  checksum: 183cc22ecf19d4430787f3de0a7a489ecdfe522021de3f636f9e01e040bcf6bb7d8bddbb6d551d67bd2d74587587f9c77d12214602e90fc1a70d454101bad20d
+  languageName: node
+  linkType: hard
+
+"cloudinary-react@npm:^1.8.1":
+  version: 1.8.1
+  resolution: "cloudinary-react@npm:1.8.1"
+  dependencies:
+    cloudinary-core: "npm:^2.13.0"
+    prop-types: "npm:^15.8.1"
+  peerDependencies:
+    react: ^16.3.3 || ^17.0.0 || ^18.0.0
+  checksum: 596b75927a0cd3d8eaedddef8473e6882487bd23668d26bf8f220fa96964871653bed2dbe8f7d701ec4e6fc583f5212f88b1aa7c785854bd9d039089f7b7115f
   languageName: node
   linkType: hard
 
@@ -13585,6 +13606,7 @@ __metadata:
     "@types/react": "npm:^18.2.48"
     "@types/react-dom": "npm:^18.2.18"
     autoprefixer: "npm:^10.4.17"
+    cloudinary-react: "npm:^1.8.1"
     flowbite: "npm:^2.2.1"
     gh-pages: "npm:^6.1.1"
     postcss: "npm:^8.4.33"
