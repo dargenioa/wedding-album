@@ -29,10 +29,10 @@ const FileUpload = () => {
     });
 
 
-    const fileDropHandler = async (files: File[]) => {
-        setFiles(files)
-        console.log(files)
-    }
+    // const fileDropHandler = async (files: File[]) => {
+    //     setFiles(files)
+    //     console.log(files)
+    // }
     return (
         <CloudinaryUploadWidget uploadConfig={uploadConfig} />
     )
