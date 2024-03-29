@@ -44,16 +44,36 @@ const FileUpload = () => {
             uploadPreset: process.env.REACT_APP_PRESET,
             folder: "wedding-album",
             sources: ["local", "camera", "dropbox", "google_drive"],
-            theme: "purple", //change to a purple theme
-
+            // styles: {
+            //     palette: {
+            //         window: "#e6d7ff",
+            //         windowBorder: "#000000",
+            //         tabIcon: "#000000",
+            //         menuIcons: "#000000",
+            //         textDark: "#000000",
+            //         textLight: "#000000",
+            //         link: "#a064c9",
+            //         // action: "#000000",
+            //         // inactiveTabIcon: "#0E2F5A",
+            //         // error: "#F44235",
+            //         inProgress: "#000000",
+            //         // complete: "#20B832",
+            //         sourceBg: "#e6d7ff"
+            //     },
+            // frame: {
+            //     background: "#e6d7ff"
+            // },
+            // fonts: {
+            //     "'Cute Font', cursive": "https://fonts.googleapis.com/css?family=Cute+Font",
+            // }
+            // }
         }, (error: any, result: any) => {
             if (!error && result && result.event === "success") {
                 console.log('Upload success:', result.info);
+                console.log('result info:', result);
+
             }
 
-            if (error) {
-                alert(`we countered and error ${error} please text your photos to the couple 973-632-1861`)
-            }
 
         });
         // Open the widget
@@ -61,12 +81,24 @@ const FileUpload = () => {
 
     };
     return (
+
+        // <div
+        //     style={{
+        //         // width: '100%',
+        //         height: '800px',
+        //         backgroundImage: `url('https://res.cloudinary.com/${process.env.REACT_APP_CLOUDNAME}/image/upload/w_800,h_600,c_fill,g_auto,q_auto/v1711742258/assets/h6ljpvsfogddoi5clhap.jpg')`,
+        //         backgroundSize: 'cover',
+        //         backgroundPosition: 'center',
+        //     }}
+        // >
         cloudinaryReady ?
             <button onClick={openCloudinaryWidget}>
                 Upload
             </button>
             :
             <div>Loading</div>
+        // </div>
+
     )
 }
 export default FileUpload;
