@@ -1,103 +1,86 @@
-import { useEffect, useState } from "react";
+import { useRef, useState } from "react";
+
+import axios from "axios";
 
 
-declare global {
-    interface Window { cloudinary: any; }
-}
-
-window.cloudinary = window.cloudinary || {};
 const FileUpload = () => {
-    const [cloudinaryReady, setCloudinaryReady] = useState(false);
-    const cloudinaryWidgetScript = document.getElementById('cloudinaryWidget');
-    useEffect(() => {
-        if (!cloudinaryWidgetScript) {
-            const createCloudinaryScript = document.createElement("script")
-            createCloudinaryScript.src = 'https://widget.cloudinary.com/v2.0/global/all.js';
-            createCloudinaryScript.onload = () => {
-                setCloudinaryReady(true);
-            };
-            document.head.appendChild(createCloudinaryScript);
+
+    const [success, setSuccess] = useState<boolean>()
+    const [error, setError] = useState<boolean>()
+
+    const widgetRef = useRef<HTMLInputElement>(null);
+
+
+    const uploadToCloudinary = async (file: any) => {
+        const uploadPreset = process.env.REACT_APP_PRESET as any
+        try {
+            const formData = new FormData();
+            formData.append('file', file);
+            formData.append('upload_preset', uploadPreset);
+
+            const response = await axios.post(
+                `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDNAME}/auto/upload`,
+                formData,
+                {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    },
+                }
+            );
+
+            console.log('Upload response:', response.data);
+            setSuccess(true)
+        } catch (error) {
+            console.error('Upload error:', error);
+            setError(true)
         }
-
-    }, []);
-
-    const [uploadConfig] = useState({
-        cloudName: process.env.REACT_APP_CLOUDNAME,
-        uploadPreset: process.env.REACT_APP_PRESET,
-        // cropping: true, //add a cropping step
-        // showAdvancedOptions: true,  //add advanced options (public_id and tag)
-        sources: ["local", "camera", "dropbox", "google_drive"],
-        // multiple: false,  //restrict upload to a single file
-        folder: "wedding-album", //upload files to the specified folder
-        // tags: ["users", "profile"], //add the given tags to the uploaded files
-        // context: {alt: "user_uploaded"}, //add the given context data to the uploaded files
-        // clientAllowedFormats: ["images", ], //restrict uploading to image files only
-        // maxImageFileSize: 2000000,  //restrict file size to less than 2MB
-        // maxImageWidth: 2000, //Scales the image down to a width of 2000 pixels before uploading
-        // theme: "purple", //change to a purple theme
-    });
-
-    const openCloudinaryWidget = () => {
-        // Cloudinary upload widget configuration
-        const widget = window.cloudinary.createUploadWidget({
-            cloudName: process.env.REACT_APP_CLOUDNAME,
-            uploadPreset: process.env.REACT_APP_PRESET,
-            folder: "wedding-album",
-            sources: ["local", "camera", "dropbox", "google_drive"],
-            // styles: {
-            //     palette: {
-            //         window: "#e6d7ff",
-            //         windowBorder: "#000000",
-            //         tabIcon: "#000000",
-            //         menuIcons: "#000000",
-            //         textDark: "#000000",
-            //         textLight: "#000000",
-            //         link: "#a064c9",
-            //         // action: "#000000",
-            //         // inactiveTabIcon: "#0E2F5A",
-            //         // error: "#F44235",
-            //         inProgress: "#000000",
-            //         // complete: "#20B832",
-            //         sourceBg: "#e6d7ff"
-            //     },
-            // frame: {
-            //     background: "#e6d7ff"
-            // },
-            // fonts: {
-            //     "'Cute Font', cursive": "https://fonts.googleapis.com/css?family=Cute+Font",
-            // }
-            // }
-        }, (error: any, result: any) => {
-            if (!error && result && result.event === "success") {
-                console.log('Upload success:', result.info);
-                console.log('result info:', result);
-
-            }
-
-
-        });
-        // Open the widget
-        widget.open();
-
     };
-    return (
 
-        // <div
-        //     style={{
-        //         // width: '100%',
-        //         height: '800px',
-        //         backgroundImage: `url('https://res.cloudinary.com/${process.env.REACT_APP_CLOUDNAME}/image/upload/w_800,h_600,c_fill,g_auto,q_auto/v1711742258/assets/h6ljpvsfogddoi5clhap.jpg')`,
-        //         backgroundSize: 'cover',
-        //         backgroundPosition: 'center',
-        //     }}
-        // >
-        cloudinaryReady ?
-            <button onClick={openCloudinaryWidget}>
-                Upload
-            </button>
-            :
-            <div>Loading</div>
-        // </div>
+    const handleFilesSelected = (event) => {
+        const files = [...event.target.files];
+        if (files && files.length > 0) {
+            files.forEach((file) => {
+                uploadToCloudinary(file)
+            })
+        }
+    };
+
+
+    return (
+        <div>
+            <div className="flex items-center justify-center w-full">
+                <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                        <svg className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
+                        </svg>
+                        <p className="mb-2 text-sm text-gray-500 dark:text-gray-400"><span className="font-semibold">Click to upload</span> or drag and drop</p>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                    </div>
+                    <input
+                        id="dropzone-file"
+                        type="file"
+                        ref={widgetRef}
+                        style={{ display: 'none' }}
+                        multiple
+                        onChange={handleFilesSelected}
+                    />
+                    {success &&
+                        <div>
+                            Thank you for your photos!
+                        </div>
+                    }
+                </label>
+
+            </div>
+            {error &&
+                <div>
+                    * Some of your photos could not be uploaded, please text them to us
+                </div>
+            }
+        </div>
+
+
 
     )
 }
