@@ -5,7 +5,7 @@ import FileUpload from "./components/FileUpload";
 function App() {
 
   return (
-    <div className="App bg-slate-500">
+    <div className="bg-black overflow-hidden p-8">
       <FileUpload />
     </div>
   );
