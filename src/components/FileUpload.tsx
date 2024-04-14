@@ -62,7 +62,7 @@ const FileUpload = () => {
 
 
     return (
-        <div className="px-10 pt-48 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+        <div className="px-10 pt-40 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
             <div className="mb-4 text-4xl font-DancingScript text-black md:text-5xl lg:text-6xl">
                 <h1>The DelPesce's</h1>
                 <h1>Wedding Ablum</h1>
@@ -97,7 +97,7 @@ const FileUpload = () => {
                     Submit
                 </button>
             </div >
-            <div className="text-black text-center mt-8 font-DancingScript">{text}</div>
+            <div className="text-black text-center mt-4 font-DancingScript">{text}</div>
 
         </div >
 
