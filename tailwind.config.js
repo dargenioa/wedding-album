@@ -5,7 +5,12 @@ module.exports = {
     'node_modules/flowbite-react/lib/esm/**/*.js'
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        DancingScript: ['Dancing Script', 'cursive'],
+       },
+   
+    },
   },
   plugins: [require('flowbite/plugin')],
 }

@@ -5,7 +5,7 @@ import FileUpload from "./components/FileUpload";
 function App() {
 
   return (
-    <div className="bg-black overflow-hidden p-8">
+    <div className="min-h-screen bg-cover bg-center bg-[url('https://res.cloudinary.com/dusgzehfe/image/upload/v1713097272/assests/lrb5jljzrwqb8wzyoarf.avif')]">
       <FileUpload />
     </div>
   );
