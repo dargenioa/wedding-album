@@ -50,6 +50,7 @@ const FileUpload = () => {
         files?.forEach((file: any) => {
             uploadToCloudinary(file)
         })
+        setFiles([]);
     }
 
     const handleError = () => {
